@@ -56,6 +56,7 @@ public class BookRest {
         if (op.isEmpty()) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
+        System.out.println("findById");
         return Response.ok(op.get()).build();
     }
 

@@ -25,15 +25,17 @@ dependencies {
     implementation("io.quarkus:quarkus-resteasy-reactive-jackson") //JSON
     implementation("io.quarkus:quarkus-hibernate-orm-panache") //JPA Hibernate+ repo
 
-    //REST CLIENT
-    implementation("io.quarkus:quarkus-rest-client-reactive")
-    implementation("io.quarkus:quarkus-rest-client-reactive-jackson")
-
     implementation("org.postgresql:postgresql:42.7.3")
     implementation("io.quarkus:quarkus-jdbc-postgresql:3.11.2")
+
+    //REST Client
+    implementation("io.quarkus:quarkus-rest-client-reactive")
+    implementation("io.quarkus:quarkus-rest-client-reactive-jackson")
 
     implementation("org.projectlombok:lombok:1.18.32")
     annotationProcessor("org.projectlombok:lombok:1.18.32")
 
-    implementation("io.smallrye.stork:stork-service-discovery-static-list:2.6.0")
+    // LoadBalancer
+    //implementation("io.smallrye.stork:stork-service-discovery-static-list:2.6.0")
+    implementation("io.smallrye.stork:stork-service-discovery-consul:2.6.0")
 }

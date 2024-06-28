@@ -30,4 +30,7 @@ dependencies {
 
     implementation("org.projectlombok:lombok:1.18.32")
     annotationProcessor("org.projectlombok:lombok:1.18.32")
+
+    // Registro (para interactuar con el servidor)
+    implementation("io.smallrye.reactive:smallrye-mutiny-vertx-consul-client")
 }
