@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ejemplo05_quarkus/ejemplo05_quarkus.prog-distribuida.ejemplo05_quarkus.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ejemplo05_quarkus/ejemplo05_quarkus.prog-distribuida.ejemplo05_quarkus.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ejemplo05_quarkus_author/ejemplo05_quarkus_author.prog-distribuida.ejemplo05_quarkus_author.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ejemplo05_quarkus_author/ejemplo05_quarkus_author.prog-distribuida.ejemplo05_quarkus_author.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ejemplo05_quarkus/org.example.prog-distribuida.ejemplo05_quarkus.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ejemplo05_quarkus/org.example.prog-distribuida.ejemplo05_quarkus.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ejemplo05_quarkus_author/org.example.prog-distribuida.ejemplo05_quarkus_author.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ejemplo05_quarkus_author/org.example.prog-distribuida.ejemplo05_quarkus_author.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ejemplo05_quarkus/prog-distribuida.ejemplo05_quarkus.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ejemplo05_quarkus/prog-distribuida.ejemplo05_quarkus.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ejemplo05_quarkus_author/prog-distribuida.ejemplo05_quarkus_author.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ejemplo05_quarkus_author/prog-distribuida.ejemplo05_quarkus_author.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ejemplo05_quarkus_author/progra_dist_clases.ejemplo05_quarkus_author.prog-distribuida.ejemplo05_quarkus_author.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ejemplo05_quarkus_author/progra_dist_clases.ejemplo05_quarkus_author.prog-distribuida.ejemplo05_quarkus_author.main.iml" />
     </modules>
   </component>
 </project>

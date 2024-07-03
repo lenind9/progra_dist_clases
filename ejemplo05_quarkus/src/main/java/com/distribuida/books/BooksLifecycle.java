@@ -1,4 +1,4 @@
-package com.distribuida.author;
+package com.distribuida.books;
 
 import io.quarkus.runtime.ShutdownEvent;
 import io.quarkus.runtime.StartupEvent;
@@ -17,8 +17,7 @@ import java.util.List;
 import java.util.UUID;
 
 @ApplicationScoped
-public class AuthorsLifecycle {
-
+public class BooksLifecycle {
     @ConfigProperty(name = "consul.host", defaultValue = "localhost")
     private String consulHost;
 
@@ -32,7 +31,7 @@ public class AuthorsLifecycle {
 
     // Para cuando la app inicie
     public void init(@Observes StartupEvent evt, Vertx vertx) throws UnknownHostException {
-        System.out.println("*****AuthorsLifecyclle.init");
+        System.out.println("*****BooksLifecyclle.init");
 
         ConsulClient client = ConsulClient.create(vertx,
                 new ConsulClientOptions().setHost(consulHost).setPort(consulPort)
@@ -40,20 +39,20 @@ public class AuthorsLifecycle {
 
         serviceId = UUID.randomUUID().toString();
         var ipAddress = InetAddress.getLocalHost();
-        String httpCheckUrl = String.format("http://%s:%d/authors", ipAddress.getHostAddress(), port);
+        String httpCheckUrl = String.format("http://%s:%d/books", ipAddress.getHostAddress(), port);
 
         client.registerServiceAndAwait(
                 new ServiceOptions()
-                        .setName("app-authors")
+                        .setName("app-books")
                         .setId(serviceId)
                         .setAddress(ipAddress.getHostAddress())
                         .setPort(port)
                         .setTags(
                                 List.of(
                                         "traefik.enable=true",
-                                        "traefik.http.routers.app-authors.rule=PathPrefix(`/app-authors`)",
-                                        "traefik.http.routers.app-authors.middlewares=app-authors",
-                                        "traefik.http.middlewares.app-authors.stripPrefix.prefixes=/app-authors")
+                                        "traefik.http.routers.app-books.rule=PathPrefix(`/app-books`)",
+                                        "traefik.http.routers.app-books.middlewares=app-books",
+                                        "traefik.http.middlewares.app-books.stripPrefix.prefixes=/app-books")
                         )
                         .setCheckOptions(
                                 new CheckOptions()
@@ -66,7 +65,7 @@ public class AuthorsLifecycle {
 
     // Para cuando la app termine
     public void stop (@Observes ShutdownEvent evt, Vertx vertx) {
-        System.out.println("*****AuthorsLifecyclle.stop");
+        System.out.println("*****BooksLifecyclle.stop");
 
         ConsulClient client = ConsulClient.create(vertx,
                 new ConsulClientOptions().setHost(consulHost).setPort(consulPort)
