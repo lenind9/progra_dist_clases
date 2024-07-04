@@ -2,7 +2,7 @@
 #   docker build -t app-authors .
 #
 
-FROM eclipse-temurin:17.0.11_9-jre-jammy
+FROM eclipse-temurin:17.0.11_9-jre-alpine
 
 RUN mkdir /app
 WORKDIR /app
